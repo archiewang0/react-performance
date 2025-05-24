@@ -1,19 +1,4 @@
-import React, {
-  useState,
-  useMemo,
-  useCallback,
-  memo,
-  ChangeEvent,
-  useRef,
-  HTMLAttributes,
-  ReactNode,
-  useEffect,
-} from "react";
-
-// interface LazyImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
-//   src: string;
-//   alt: string;
-// }
+import React, { useState, useRef, useEffect } from "react";
 
 type LazyImageProps = {
   src: string;

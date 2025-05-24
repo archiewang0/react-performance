@@ -1,9 +1,8 @@
 import React, { useState, useCallback, memo, ChangeEvent } from "react";
-
 // ========================
 // 6. 狀態優化 - 避免不必要的狀態更新
 // ========================
-export const OptimizedForm = () => {
+const OptimizedForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -40,14 +39,11 @@ export const OptimizedForm = () => {
     return Object.keys(newErrors).length === 0;
   }, [formData]);
 
-  const handleSubmit = useCallback(
-    (e: React.MouseEvent<HTMLButtonElement>) => {
-      if (validateForm()) {
-        console.log("表單提交:", formData);
-      }
-    },
-    [formData, validateForm]
-  );
+  const handleSubmit = useCallback(() => {
+    if (validateForm()) {
+      console.log("表單提交:", formData);
+    }
+  }, [formData, validateForm]);
 
   return (
     <div className="p-4 bg-blue-50 border border-blue-200 rounded mb-4">
@@ -120,3 +116,8 @@ const FormField = memo(
     );
   }
 );
+
+FormField.displayName = "FormField";
+OptimizedForm.displayName = "OptimizedForm";
+
+export { OptimizedForm };

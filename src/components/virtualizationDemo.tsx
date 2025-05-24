@@ -38,11 +38,11 @@ const PerformanceTester = () => {
 
       // 模擬 DOM 渲染時間
       await new Promise((resolve) => {
-        const items = Array.from({ length: itemCount }, (_, i) => i);
+        // const items = Array.from({ length: itemCount }, (_, i) => i);
         // 模擬渲染複雜度
-        const complexCalculation = items.reduce((acc, item) => {
-          return acc + Math.sqrt(item * 2);
-        }, 0);
+        // const complexCalculation = items.reduce((acc, item) => {
+        //   return acc + Math.sqrt(item * 2);
+        // }, 0);
 
         setTimeout(resolve, 10); // 模擬渲染延遲
       });

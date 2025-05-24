@@ -84,3 +84,5 @@ const UserItem = memo(({ user, onClick }: UserItemProps) => {
     </div>
   );
 });
+
+UserItem.displayName = "UserItem";

@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useMemo,
-  useCallback,
-  memo,
-  useRef,
-  useEffect,
-} from "react";
+import React, { memo } from "react";
 
 interface ExpensiveChildProps {
   name: string;
@@ -34,3 +27,5 @@ export const ExpensiveChild = memo(
     );
   }
 );
+
+ExpensiveChild.displayName = "ExpensiveChild";

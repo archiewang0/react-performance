@@ -1,13 +1,4 @@
-import React, {
-  useState,
-  useMemo,
-  useCallback,
-  memo,
-  ChangeEvent,
-  useRef,
-  HTMLAttributes,
-  ReactNode,
-} from "react";
+import React, { useState, useMemo, useCallback, useRef } from "react";
 import Link from "next/link";
 interface VirtualizedListProps {
   items: string[];

@@ -1,11 +1,4 @@
-import React, {
-  useState,
-  useMemo,
-  useCallback,
-  memo,
-  useRef,
-  useEffect,
-} from "react";
+import React, { useMemo } from "react";
 
 interface ExpensiveCalculationProps {
   numbers: number[];
