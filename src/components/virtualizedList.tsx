@@ -35,9 +35,21 @@ export const VirtualizedList = ({ items }: VirtualizedListProps) => {
   return (
     <div className="mb-4">
       <h3 className="font-bold mb-2">虛擬化列表 (共 {items.length} 項)</h3>
-      <Link href="/virtualized-list-page" className=" font-bold">
-        前往虛擬化列表比較頁面 →
-      </Link>
+      <ul className=" ml-5">
+        <li>
+          <Link href="/virtualized-list-page" className=" font-bold">
+            前往虛擬化列表VS傳統列表比較頁面 →
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/virtualized-dynamic-h-item-list-page"
+            className=" font-bold"
+          >
+            前往動態item虛擬化列表頁面 →
+          </Link>
+        </li>
+      </ul>
 
       <div
         ref={containerRef}

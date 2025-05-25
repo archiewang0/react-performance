@@ -15,7 +15,9 @@ export const LazyImage = ({ src, alt, ...props }: LazyImageProps) => {
 
   useEffect(() => {
     const observer = new IntersectionObserver(
+      // 檢查是否進入觀察範圍 取消observer
       ([entry]) => {
+        // isIntersecting 是否與可是畫面相交
         if (entry.isIntersecting) {
           setIsInView(true);
           observer.disconnect();
@@ -24,6 +26,7 @@ export const LazyImage = ({ src, alt, ...props }: LazyImageProps) => {
       { threshold: 0.1 }
     );
 
+    // 設定觀察對象
     if (imgRef.current) {
       observer.observe(imgRef.current);
     }
